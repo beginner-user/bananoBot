@@ -1,0 +1,13 @@
+
+{
+  "name": "anonjoy/bananoBot",
+  "description": "Bot de haxball",
+  "author": "anonjoy & ayudantehax",
+  "config": {
+    "path": "src"
+  },
+  "plugins": [
+    "anonjoy/tu-modulo",
+    "ayudantehax/mi-modulo"
+  ]
+}
