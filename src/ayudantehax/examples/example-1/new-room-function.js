@@ -9,6 +9,9 @@ room.pluginSpec = {
 
 function newRoomFunction(...args){
   console.log(`newRoomFunction has been called`);
+  let msg = `and the arguments are `;
+  for (let arg of args) msg += ` ` + arg;
+  console.log(msg);
   // ...
 }
 
