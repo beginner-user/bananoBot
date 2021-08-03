@@ -8,8 +8,7 @@ room.pluginSpec = {
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
-  console.log(`Second call`);
-  console.log(callingPluginName);
+  console.log(`Second call of the plugin ` + callingPluginName + ` for the newRoomFunction`);
   // ...
   let { [`${callingPluginName}_slevel`]: slevel } = args[args.length - 1];
   if (slevel !== undefined) {
