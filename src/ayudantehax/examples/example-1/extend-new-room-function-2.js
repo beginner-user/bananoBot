@@ -14,9 +14,9 @@ room.pluginSpec = {
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
+  if (callingPluginName === undefined) callingPluginName = ``; // HHM.manager.room
   console.log(`Second call from the plugin ` + callingPluginName + ` to newRoomFunction`);
   let { [`${callingPluginName}_slevel`]: slevel } = args[args.length - 1];
-  if (callingPluginName === undefined) callingPluginName = ``; // HHM.manager.room
   // ...
   if (slevel !== undefined) {
     console.log(`and the argument of this call is ` + slevel);
