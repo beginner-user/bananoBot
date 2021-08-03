@@ -27,16 +27,11 @@ HHM.config.postInit = HBInit => {
 };
 
 HHM.config.plugins = {
-  'sav/roles': {
-    roles: {
-      'host': `123456`,
-      // 'admin': `admin password`
-    },
-  },
-  'sav/core': {},
-  'sav/plugin-control': {},
   'anonjoy/tu-modulo': {},
   'ayudantehax/mi-modulo': {},
+  'ayudantehax/examples/example-1/new-room-function': {},
+  'ayudantehax/examples/example-1/extend-new-room-function-1': {},
+  'ayudantehax/examples/example-1/extend-new-room-function-2': {},
   // 'iniciar/modulo' : {}
 };
 
@@ -48,7 +43,7 @@ HHM.config.repositories = [
   {
     type: `github`,
     repository: `anonjoy/bananoBot`,
-    version: `development`,
+    version: `examples`,
   },
 ];
 
