@@ -8,7 +8,7 @@ room.pluginSpec = {
 }
 
 function newGlobalFunction({ callingPluginName, previousFunction }, ...args) {
-  args.pop(); // el ultimo argumento es el objeto que contiene los nuevos argumentos de las extensiones
+  args.pop(); // el ultimo argumento es el objeto que contiene los argumentos de las extensiones
   console.log(`newGlobalFunction has been called from: ` + callingPluginName);
   let msg = `and the arguments of the function are: `;
   for (let arg of args) msg += arg +`, `;
