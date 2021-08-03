@@ -8,7 +8,7 @@ room.pluginSpec = {
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
-  console.log(`Fist call`);
+  console.log(`First call`);
   console.log(callingPluginName);
   // ...
   let { [`${callingPluginName}_level`]: level } = args[args.length - 1];
