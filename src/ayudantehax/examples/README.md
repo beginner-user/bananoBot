@@ -1,3 +1,7 @@
+# Cambiar configuración desde la consola
+
+Ej: ```HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).getConfig().cancelEvent = true;```
+
 # Extensiones de una función
 
 Solo se pueden extender funciones globales, de lo contrario se creara una nueva función global (global para todos los plugins y repositorios, no solo este).
