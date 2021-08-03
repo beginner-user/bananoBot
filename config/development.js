@@ -42,7 +42,7 @@ HHM.config.repositories = [
   },
   {
     type: `github`,
-    repository: `anonjoy/bananoBot`,
+    repository: `beginner-user/bananoBot`,
     version: `examples`,
   },
 ];
