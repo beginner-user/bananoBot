@@ -4,24 +4,17 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/examples/order/global-functions/extend-global-function-2`,
+  name: `ayudantehax/examples/order/global-functions/second-call`,
   author: `ayudantehax`,
   order: {
     'sendAnnouncement': {
-      'before': [`ayudantehax/examples/order/global-functions/extend-global-function-1`],
+      'before': [`ayudantehax/examples/order/global-functions/first-call`],
     },
   },
 }
 
-function secondExtension({ previousFunction, callingPluginName }, ...args) {
-  console.log(`Last extension first call, from the plugin ` + callingPluginName);
-  if (typeof previousFunction === `function`) {
-    return previousFunction(...args);
-  }
+function onTestEventHandler() {
+  room.sendAnnouncement(`Second announcement`);
 }
 
-function onRoomLinkHandler(url) {
-  room.extend(`sendAnnouncement`, secondExtension);
-}
-
-room.onRoomLink = onRoomLinkHandler;
+room.onTestEvent = onTestEventHandler;
