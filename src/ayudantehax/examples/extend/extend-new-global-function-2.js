@@ -28,7 +28,7 @@ room.onRoomLink = function(url) {
 
 /*
 
-examples of (native) room functions:
+examples of (native) global functions:
 
 - room.sendChat(message, targetId)
 - room.setPlayerAdmin(playerId, admin)
