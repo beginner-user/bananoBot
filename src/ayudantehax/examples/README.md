@@ -1,3 +1,7 @@
+# Activar/triggerear eventos desde la consola
+
+Ej: ```HHM.manager.triggerEvent(`onSomeEvent`, ...args)```
+
 # Cambiar configuración desde la consola
 
 Ej: ```HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).getConfig().cancelEvent = true;```
@@ -16,14 +20,14 @@ Para que todas las extensiones sean llamadas siempre se debe llamar a ```previou
 
 Desde la consola: 
 ```
-HHM.manager.room.newRoomFunction(functionArguments, { [`${HHM.manager.room.getName()}_argName`]: extendedArgument })
+HHM.manager.room.newRoomFunction(...functionArguments, { [`${HHM.manager.room.getName()}_argName`]: extendedArgument })
 ```
 o lo que es lo mismo 
 ```
-HHM.manager.room.newRoomFunction(functionArguments, { `undefined_argName`: extendedArgument })
+HHM.manager.room.newRoomFunction(...functionArguments, { `undefined_argName`: extendedArgument })
 ```
 
 Desde un plugin: 
 ```
-room.newRoomFunction(functionArguments, { [`${room.getName()}_argName`]: extendedArgument })
+room.newRoomFunction(...functionArguments, { [`${room.getName()}_argName`]: extendedArgument })
 ```
