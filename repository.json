@@ -12,5 +12,6 @@
     "ayudantehax/examples/global-functions/new-global-function",
     "ayudantehax/examples/extend/extend-new-global-function-1",
     "ayudantehax/examples/extend/extend-new-global-function-2",
+    "ayudantehax/examples/import-export-functions/export-function",
   ]
 }
