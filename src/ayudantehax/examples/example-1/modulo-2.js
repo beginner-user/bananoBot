@@ -9,6 +9,6 @@ room.pluginSpec = {
   dependencies: [`ayudantehax/examples/example-1/modulo-1`],
 }
 
-room.onRoomLink = function(byPlayer) {
+room.onRoomLink = function(url) {
   room.getPlayerList({ [`${room.getName()}_team`]: 0 });
 }
