@@ -18,7 +18,7 @@ function extendNewGlobalFunction({ callingPluginName, previousFunction }, ...arg
   }
   if (typeof previousFunction === `function`) {
     // ...
-    return previousFunction(...args); // si omitis esto, entonces las futuras extensiones no seran ejecutadas
+    return previousFunction(...args); // si omitis esto, entonces ni la funcion original, ni la primera extension seran ejectuados
   }
 }
 
