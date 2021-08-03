@@ -3,7 +3,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/examples/global-function/new-global-function`,
+  name: `ayudantehax/examples/global-functions/new-global-function`,
   author: `ayudantehax`,
 }
 
