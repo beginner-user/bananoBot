@@ -17,7 +17,7 @@ function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args)
   }
   if (typeof previousFunction === `function`) {
     // ...
-    // return previousFunction();
+    return previousFunction();
   }
 }
 
