@@ -10,7 +10,7 @@ HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handl
 ```
 o
 ```
-HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).setConfig(cancelEvent, true);
+HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).setConfig(`cancelEvent`, true);
 ```
 
 # Extensiones de una función
