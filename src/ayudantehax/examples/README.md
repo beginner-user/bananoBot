@@ -1,14 +1,14 @@
 
 Desde la consola: 
 ```
-HHM.manager.room.newRoomFunction(previousArguments, { [`${HHM.manager.room.getName()}_level`]: newArgument })
+HHM.manager.room.newRoomFunction(functionArguments, { [`${HHM.manager.room.getName()}_level`]: extendedArgument })
 ```
 o lo que es lo mismo 
 ```
-HHM.manager.room.newRoomFunction(previousArguments, { `undefined_level`: newArgument })
+HHM.manager.room.newRoomFunction(functionArguments, { `undefined_level`: extendedArgument })
 ```
 
 Desde un plugin: 
 ```
-room.newRoomFunction(previousArguments, { [`${room.getName()}_level`]: newArgument })
+room.newRoomFunction(functionArguments, { [`${room.getName()}_level`]: extendedArgument })
 ```
