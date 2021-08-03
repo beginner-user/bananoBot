@@ -7,10 +7,11 @@ room.pluginSpec = {
   author: `ayudantehax`,
 }
 
-function extendNewRoomFunction({ callingPluginName, previousFunction }, { [`${callingPluginName}_level`]: level }){
+function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
   console.log(`Fist call`);
   console.log(callingPluginName);
   // ...
+  let { [`${callingPluginName}_level`]: level } = args[args.length - 1];
   if (level !== undefined) {
     // ...
   }
