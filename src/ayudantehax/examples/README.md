@@ -5,7 +5,7 @@ HHM.manager.room.newRoomFunction(previousArguments, { [`${HHM.manager.room.getNa
 ```
 o lo que es lo mismo 
 ```
-HHM.manager.room.newRoomFunction(previousArguments, { [`undefined_level`]: newArgument })
+HHM.manager.room.newRoomFunction(previousArguments, { `undefined_level`: newArgument })
 ```
 
 Desde un plugin: 
