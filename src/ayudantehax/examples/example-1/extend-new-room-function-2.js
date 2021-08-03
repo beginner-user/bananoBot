@@ -12,7 +12,7 @@ function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args)
   // ...
   let { [`${callingPluginName}_slevel`]: slevel } = args[args.length - 1];
   if (slevel !== undefined) {
-    console.log(slevel);
+    console.log(`and the argument of this call is ` + slevel);
     // ...
   }
   if (typeof previousFunction === `function`) {
