@@ -1,6 +1,9 @@
 # Activar/triggerear eventos desde la consola
 
-Ej: ```HHM.manager.triggerEvent(`onSomeEvent`, ...args)```
+Ej: 
+```
+HHM.manager.triggerEvent(`onSomeEvent`, ...args)
+```
 
 # Cambiar configuración desde la consola
 
