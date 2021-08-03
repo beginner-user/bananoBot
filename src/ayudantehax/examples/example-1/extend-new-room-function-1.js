@@ -15,6 +15,10 @@ function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args)
     console.log(`and the argument of this call is ` + flevel);
     // ...
   }
+  if (typeof previousFunction === `function`) {
+    // ...
+    return previousFunction(...args);
+  }
 }
 
 room.onRoomLink = function(url) {
