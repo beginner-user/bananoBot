@@ -8,10 +8,10 @@ room.pluginSpec = {
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
-  if (callingPluginName === undefined) callingPluginName = ``; // HHM.manager.room
   console.log(`First call from the plugin ` + callingPluginName + ` to newRoomFunction`);
-  // ...
   let { [`${callingPluginName}_flevel`]: flevel } = args[args.length - 1];
+  if (callingPluginName === undefined) callingPluginName = ``; // HHM.manager.room
+  // ...
   if (flevel !== undefined) {
     console.log(`and the argument of this call is ` + flevel);
     // ...
