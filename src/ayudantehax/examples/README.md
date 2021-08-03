@@ -1,6 +1,6 @@
 
-Desde la consola: ```HHM.manager.room.newRoomFunction(args, { [`${HHM.manager.room.getName()}_level`]: `level` })```
+Desde la consola: ```HHM.manager.room.newRoomFunction(previousArguments, { [`${HHM.manager.room.getName()}_level`]: newArgument })```
 
-o lo que es lo mismo ```HHM.manager.room.newRoomFunction(args, { [`undefined_level`]: `level` })```
+o lo que es lo mismo ```HHM.manager.room.newRoomFunction(previousArguments, { [`undefined_level`]: newArgument })```
 
-Desde un plugin: ```room.newRoomFunction(args, { [`${room.getName()}_level`]: `level` })```
+Desde un plugin: ```room.newRoomFunction(previousArguments, { [`${room.getName()}_level`]: newArgument })```
