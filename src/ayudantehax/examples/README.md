@@ -2,7 +2,7 @@
 
 Ej: 
 ```
-HHM.manager.triggerEvent(`onSomeEvent`, ...args)
+HHM.manager.room.triggerEvent(`onSomeEvent`, ...args)
 ```
 
 # Cambiar configuración desde la consola
