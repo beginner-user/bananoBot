@@ -1,3 +1,7 @@
+# Extensiones de una función
+
+La ultima extensión es la primer función a la que llamará HHM, la función original será la ultima en ser llamada.
+
 # Pasar parametros a una función extendida
 
 Desde la consola: 
