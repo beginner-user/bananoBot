@@ -4,7 +4,14 @@ Ej: ```HHM.manager.triggerEvent(`onSomeEvent`, ...args)```
 
 # Cambiar configuración desde la consola
 
-Ej: ```HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).getConfig().cancelEvent = true;```
+Ej: 
+```
+HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).getConfig().cancelEvent = true;
+```
+o
+```
+HHM.manager.room.getPlugin(`ayudantehax/examples/handling-events/pre-event-handler-2`).setConfig(cancelEvent, true);
+```
 
 # Extensiones de una función
 
