@@ -8,7 +8,8 @@ room.pluginSpec = {
 }
 
 function newRoomFunction(...args){
-
+  console.log(`new room function has been called`);
+  // ...
 }
 
 room.newRoomFunction = newRoomFunction;
