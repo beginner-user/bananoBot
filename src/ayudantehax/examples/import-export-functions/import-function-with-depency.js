@@ -4,7 +4,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/examples/import-export-functions/import-function-without-depency`,
+  name: `ayudantehax/examples/import-export-functions/import-function-with-depency`,
   author: `ayudantehax`,
   dependencies: [`ayudantehax/examples/import-export-functions/export-function`],
 }
