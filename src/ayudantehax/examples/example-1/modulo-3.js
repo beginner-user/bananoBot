@@ -3,10 +3,9 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/examples/example-1/modulo-2`,
+  name: `ayudantehax/examples/example-1/modulo-3`,
   author: `ayudantehax`,
   version: `1.0.0`,
-  dependencies: [`ayudantehax/examples/example-1/modulo-1`],
 }
 
 room.onRoomLink = function(url) {
