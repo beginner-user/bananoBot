@@ -9,8 +9,8 @@
   "plugins": [
     "anonjoy/tu-modulo",
     "ayudantehax/mi-modulo",
-    "ayudantehax/examples/order/global-functions/extend-global-function-1",
-    "ayudantehax/examples/order/global-functions/extend-global-function-2",
+    "ayudantehax/examples/order/global-functions/first-call",
+    "ayudantehax/examples/order/global-functions/second-call",
     "ayudantehax/examples/example-1/extend-new-room-function-1",
     "ayudantehax/examples/example-1/extend-new-room-function-2",
   ]
