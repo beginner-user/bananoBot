@@ -8,16 +8,12 @@ room.pluginSpec = {
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
-  console.log(`First call`);
-  console.log(callingPluginName);
+  console.log(`First call from the plugin ` + callingPluginName + ` to newRoomFunction`);
   // ...
   let { [`${callingPluginName}_flevel`]: flevel } = args[args.length - 1];
   if (flevel !== undefined) {
+    console.log(`and the argument of this call is ` + flevel);
     // ...
-  }
-  if (typeof previousFunction === `function`) {
-    // ...
-    // return previousFunction();
   }
 }
 
