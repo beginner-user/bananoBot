@@ -1,3 +1,4 @@
+# Pasando parametros a una función extendida
 
 Desde la consola: 
 ```
