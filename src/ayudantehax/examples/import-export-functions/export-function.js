@@ -1,3 +1,4 @@
+
 /* * Plugin specification * */
 
 var room = HBInit();
