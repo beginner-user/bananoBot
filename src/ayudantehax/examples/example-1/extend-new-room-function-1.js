@@ -11,8 +11,8 @@ function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args)
   console.log(`First call`);
   console.log(callingPluginName);
   // ...
-  let { [`${callingPluginName}_level`]: level } = args[args.length - 1];
-  if (level !== undefined) {
+  let { [`${callingPluginName}_flevel`]: flevel } = args[args.length - 1];
+  if (flevel !== undefined) {
     // ...
   }
   if (typeof previousFunction === `function`) {
