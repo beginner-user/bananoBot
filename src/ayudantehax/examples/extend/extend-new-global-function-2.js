@@ -5,6 +5,7 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/examples/extend/extend-new-global-function-2`,
   author: `ayudantehax`,
+  dependencies: [`ayudantehax/examples/extend/extend-new-global-function-1`],
 }
 
 function extendNewGlobalFunction({ callingPluginName, previousFunction }, ...args) {
