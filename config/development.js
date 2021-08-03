@@ -29,10 +29,9 @@ HHM.config.postInit = HBInit => {
 HHM.config.plugins = {
   'anonjoy/tu-modulo': {},
   'ayudantehax/mi-modulo': {},
-  'ayudantehax/examples/order/global-functions/first-call': {},
-  'ayudantehax/examples/order/global-functions/second-call': {},
-  'ayudantehax/examples/example-1/extend-new-room-function-1': {},
-  'ayudantehax/examples/example-1/extend-new-room-function-2': {},
+  'ayudantehax/examples/global-functions/new-global-function': {},
+  'ayudantehax/examples/extend/extend-new-global-function-1': {},
+  'ayudantehax/examples/extend/extend-new-global-function-2': {},
   // 'iniciar/modulo' : {}
 };
 
