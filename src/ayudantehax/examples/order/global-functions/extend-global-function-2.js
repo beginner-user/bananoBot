@@ -8,7 +8,7 @@ room.pluginSpec = {
   author: `ayudantehax`,
   order: {
     'sendAnnouncement': {
-      'after': [`ayudantehax/examples/order/global-functions/extend-global-function-1`],
+      'before': [`ayudantehax/examples/order/global-functions/extend-global-function-1`],
     },
   },
 }
