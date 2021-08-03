@@ -5,19 +5,26 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/examples/example-1/extend-new-room-function-2`,
   author: `ayudantehax`,
+  dependencies: [`ayudantehax/examples/example-1/extend-new-room-function-1`], // necesitamos crear la nueva funcion antes de extenderla
+  order: {
+    'newRoomFunction': {
+      'after': [`ayudantehax/examples/example-1/extend-new-room-function-1`], // quiero que se ejecute despues de que se cree la funcion
+    },
+  },
 }
 
 function extendNewRoomFunction({ callingPluginName, previousFunction }, ...args){
   console.log(`Second call from the plugin ` + callingPluginName + ` to newRoomFunction`);
-  // ...
   let { [`${callingPluginName}_slevel`]: slevel } = args[args.length - 1];
+  if (callingPluginName === undefined) callingPluginName = ``; // HHM.manager.room
+  // ...
   if (slevel !== undefined) {
     console.log(`and the argument of this call is ` + slevel);
     // ...
   }
   if (typeof previousFunction === `function`) {
     // ...
-    // return previousFunction(...args);
+    return previousFunction(...args); // si omitis esto, entonces las futuras extensiones no seran ejecutadas
   }
 }
 
