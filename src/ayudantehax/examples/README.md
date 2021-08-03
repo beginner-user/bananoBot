@@ -1,8 +1,12 @@
-# Activar/triggerear eventos desde la consola
+# Activar/triggerear eventos globalmente
 
-Ej: 
+Desde la consola: 
 ```
 HHM.manager.room.triggerEvent(`onSomeEvent`, ...args)
+```
+Desde un plugin: 
+```
+room.triggerEvent(`onSomeEvent`, ...args)
 ```
 
 # Cambiar configuración desde la consola
