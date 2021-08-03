@@ -7,7 +7,7 @@ room.pluginSpec = {
   author: `ayudantehax`,
   dependencies: [`ayudantehax/examples/example-1/extend-new-room-function-1`], // necesitamos crear la nueva funcion antes de extenderla
   order: {
-    'newRoomFunction': {
+    'onRoomLink': {
       'after': [`ayudantehax/examples/example-1/extend-new-room-function-1`], // quiero que se ejecute despues de que se cree la funcion
     },
   },
