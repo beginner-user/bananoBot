@@ -3,7 +3,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/mi-modulo`,
+  name: `ayudantehax/examples/example-1/modulo-1`,
   author: `ayudantehax`,
   version: `1.0.0`,
 }
