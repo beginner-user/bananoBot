@@ -6,9 +6,6 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/examples/order/global-functions/extend-global-function-1`,
   author: `ayudantehax`,
-  config: {
-    functionToExtend: `sendAnnouncement`,
-  }
 }
 
 function firstExtension({ previousFunction, callingPluginName }, ...args) {
@@ -19,7 +16,7 @@ function firstExtension({ previousFunction, callingPluginName }, ...args) {
 }
 
 function onRoomLinkHandler(url) {
-  room.extend(room.getConfig().functionToExtend, firstExtension);
+  room.extend(`sendAnnouncement`, firstExtension);
 }
 
 room.onRoomLink = onRoomLinkHandler;
