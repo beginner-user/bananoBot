@@ -16,7 +16,7 @@ const config = room.getConfig();
 function onSomeEventPreEventHook({ room, metadata }, ...args) {
   console.log(`First pre event handler has been triggered`);
   // ...
-  if (config.cancelEvent ==== true) {
+  if (config.cancelEvent === true) {
     // ...
     return false; // onSomeEvent no va a ser activado/triggereado
   }
