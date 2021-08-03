@@ -1,4 +1,4 @@
-# Pasando parametros a una función extendida
+# Pasar parametros a una función extendida
 
 Desde la consola: 
 ```
