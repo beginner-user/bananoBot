@@ -8,8 +8,9 @@ room.pluginSpec = {
   dependencies: [`ayudantehax/examples/extend/extend-new-global-function-1`],
 }
 
-function extendNewGlobalFunction({ callingPluginName, previousFunction }, functionArguments, { [`${callingPluginName}_slevel`]: slevel = undefined } = {}) {
+function extendNewGlobalFunction({ callingPluginName, previousFunction }, functionArguments, { [`${callingPluginName}_slevel`] = undefined } = {}) {
   console.log(`First call from: ` + callingPluginName + ` before calling newGlobalFunction`);
+  let { [`${callingPluginName}_slevel`]: slevel } = arguments[arguments.length - 1];
   // ...
   if (slevel !== undefined) {
     console.log(`and the argument of this call is: ` + slevel);
