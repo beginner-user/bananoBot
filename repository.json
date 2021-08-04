@@ -8,6 +8,8 @@
   },
   "plugins": [
     "anonjoy/tu-modulo",
-    "ayudantehax/mi-modulo"
+    "ayudantehax/mi-modulo",
+    "ayudantehax/console",
+    "ayudantehax/vote",
   ]
 }
