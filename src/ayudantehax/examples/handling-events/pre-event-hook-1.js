@@ -4,7 +4,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/examples/handling-events/pre-event-handler-1`,
+  name: `ayudantehax/examples/handling-events/pre-event-hook-1`,
   author: `ayudantehax`,
   config: {
     cancelEvent: false, // lo puse en config porque podes modificar su valor desde este mismo plugin; otros plugins; postInit; o la consola
