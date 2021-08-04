@@ -22,9 +22,10 @@ class InputRequestQueue {
   }
 
   dequeue(playerInput) {
-    this._queue[0].resolve(playerInput);
-    this._lastDequeue = this._queue[0].pluginName;
+    let request = this._queue[0];
+    this._lastDequeue = request.pluginName;
     this._queue.shift();
+    request.resolve(playerInput);
   }
 
   isEmpty() {
