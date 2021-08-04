@@ -7,7 +7,7 @@ room.pluginSpec = {
   author: `ayudantehax`,
 }
 
-function newGlobalFunction({ callingPluginName, previousFunction }, functionArguments, {} = {}) {
+function newGlobalFunction({ callingPluginName, previousFunction }, functionArguments) {
   console.log(`newGlobalFunction has been called from: ` + callingPluginName);
   console.log(`and the arguments of the function are: ` + functionArguments);
 }
