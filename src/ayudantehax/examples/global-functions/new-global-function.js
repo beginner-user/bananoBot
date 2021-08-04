@@ -14,7 +14,7 @@ const config = room.getConfig();
 
 function newGlobalFunction({ callingPluginName, previousFunction }, ...args) {
   console.log(`newGlobalFunction has been called from: ` + callingPluginName);
-  if (args.length > config.expectedArguments) args.pop();
+  if (args.length > config.expectedArguments) args.pop(); // el ultimo argumento es el objeto que contiene los argumentos de las extensiones (si es que se paso ese objeto)
   let msg = `and the arguments of the function are: `;
   for (let arg of args) msg += arg +`, `;
   msg.slice(0, -2);
