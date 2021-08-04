@@ -9,6 +9,25 @@ Desde un plugin:
 room.triggerEvent(`onSomeEvent`, ...args)
 ```
 
+# Activar/triggerear eventos localmente
+
+Desde la consola: 
+```
+HHM.manager.room.getPluginManager().triggerLocalEvent(pluginName, `onSomeEvent`, ...args)
+```
+o
+```
+HHM.manager.room.getPlugin(pluginName).onSomeEvent(...args);
+```
+Desde un plugin: 
+```
+room.getPluginManager().triggerLocalEvent(pluginName, `onSomeEvent`, ...args)
+```
+o
+```
+room.getPlugin(pluginName).onSomeEvent(...args);
+```
+
 # Cambiar configuración desde la consola
 
 Ej: 
