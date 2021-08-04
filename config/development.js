@@ -44,6 +44,7 @@ HHM.config.plugins = {
   'ayudantehax/examples/handling-events/pre-event-hook-1': {},
   'ayudantehax/examples/handling-events/pre-event-hook-2': {},
   'ayudantehax/examples/handling-events/pre-event-handler-hook': {},
+  'ayudantehax/examples/handling-events/post-event-handler-hook': {},
 
   // 'iniciar/modulo' : {}
 };
