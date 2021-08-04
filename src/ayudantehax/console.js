@@ -35,15 +35,18 @@ class InputRequestQueue {
 
 const inputRequests = new Map();
 
-
-
-async function addPlayerInputRequest({ previousFunction, callingPluginName }, ...args) {
-  if (typeof args[0] === `object` && args[0] !== null && args[0].hasOwnProperty(`id`) && typeof args[1] === `function`) {
-    return inputRequests.get(args[0].id).enqueue({ pluginName: callingPluginName, resolve: args[1] });
-  }
-  else {
-    return false;
-  }
+async function getPlayerInput({ previousFunction, callingPluginName }, playerId) {
+  return new Promise((resolve, reject) => {
+    if (Number.isInteger(playerId)) {
+      let response = inputRequests.get(playerId).enqueue({ pluginName: callingPluginName, resolve });
+      if (response === false) {
+        resolve(false);
+      }
+    }
+    else {
+      resolve(false);
+    }
+  });
 }
 
 function onPlayerJoinPreEventHook({ room, metadata }, ...args) {
@@ -74,7 +77,7 @@ function onPlayerLeavePreEventHook({ room, metadata }, ...args) {
 }
 
 room.onRoomLink = function(url) {
-  room.extend(`addPlayerInputRequest`, addPlayerInputRequest);
+  room.extend(`getPlayerInput`, getPlayerInput);
 
   room.addPreEventHook(`onPlayerJoin`, onPlayerJoinPreEventHook)
   room.addPreEventHook(`onPlayerChat`, onPlayerChatPreEventHook);
