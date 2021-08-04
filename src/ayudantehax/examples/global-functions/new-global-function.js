@@ -5,11 +5,16 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/examples/global-functions/new-global-function`,
   author: `ayudantehax`,
+  config: {
+    expectedArguments: 3,
+  },
 }
 
+const config = room.getConfig();
+
 function newGlobalFunction({ callingPluginName, previousFunction }, ...args) {
-  args.pop(); // el ultimo argumento es el objeto que contiene los argumentos de las extensiones
   console.log(`newGlobalFunction has been called from: ` + callingPluginName);
+  if (args.length > config.expectedArguments) args.pop();
   let msg = `and the arguments of the function are: `;
   for (let arg of args) msg += arg +`, `;
   msg.slice(0, -2);
