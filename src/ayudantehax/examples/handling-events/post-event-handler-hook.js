@@ -14,7 +14,7 @@ room.pluginSpec = {
 const config = room.getConfig();
 
 function onSomeEventPostEventHandlerHook({ room, metadata }, ...args) { // se ejecutará después de cada controlador de eventos 
-  console.log(`The previous event left a valid event status`);
+  console.log(`The previous event handler left a valid event status`);
   // ...
   if (config.invalidEventState === true) {
     // ...
