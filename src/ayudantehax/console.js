@@ -35,9 +35,14 @@ class InputRequestQueue {
 
 const inputRequests = new Map();
 
-function addPlayerInputRequest({ previousFunction, callingPluginName }, ...args) {
+
+
+async function addPlayerInputRequest({ previousFunction, callingPluginName }, ...args) {
   if (typeof args[0] === `object` && args[0] !== null && args[0].hasOwnProperty(`id`) && typeof args[1] === `function`) {
-    inputRequests.get(args[0].id).enqueue({ pluginName: callingPluginName, resolve: args[1] });
+    return inputRequests.get(args[0].id).enqueue({ pluginName: callingPluginName, resolve: args[1] });
+  }
+  else {
+    return false;
   }
 }
 
