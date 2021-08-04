@@ -11,9 +11,11 @@ room.triggerEvent(`onSomeEvent`, ...args)
 
 # Activar/triggerear eventos localmente
 
+Si activas/triggereas un evento localmente entonces ningún pre/post evento, ni ningún pre/post controlador de eventos sera activado.
+
 Desde la consola: 
 ```
-HHM.manager.room.getPluginManager().triggerLocalEvent(pluginName, `onSomeEvent`, ...args)
+HHM.manager.room.getPluginManager().triggerLocalEvent(HHM.manager.room.getPlugin(pluginName), `onSomeEvent`, ...args)
 ```
 o
 ```
@@ -21,7 +23,7 @@ HHM.manager.room.getPlugin(pluginName).onSomeEvent(...args);
 ```
 Desde un plugin: 
 ```
-room.getPluginManager().triggerLocalEvent(pluginName, `onSomeEvent`, ...args)
+room.getPluginManager().triggerLocalEvent(room.getPlugin(pluginName), `onSomeEvent`, ...args)
 ```
 o
 ```
