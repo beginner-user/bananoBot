@@ -33,6 +33,16 @@ class InputRequestQueue {
   }
 }
 
+/* * Plugin specification * */
+
+var room = HBInit();
+
+room.pluginSpec = {
+  name: `ayudantehax/console`,
+  author: `ayudantehax`,
+  version: `1.0.0`,
+}
+
 const inputRequests = new Map();
 
 async function getPlayerInput({ previousFunction, callingPluginName }, playerId) {
