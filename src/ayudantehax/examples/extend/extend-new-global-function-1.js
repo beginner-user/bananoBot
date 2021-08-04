@@ -8,9 +8,8 @@ room.pluginSpec = {
   dependencies: [`ayudantehax/examples/global-functions/new-global-function`],
 }
 
-function extendNewGlobalFunction({ callingPluginName, previousFunction }, ...args) {
+function extendNewGlobalFunction({ callingPluginName, previousFunction }, functionArguments, { [`${callingPluginName}_flevel`]: flevel = undefined } = {}) {
   console.log(`Last call from: ` + callingPluginName + ` before calling newGlobalFunction`);
-  let { [`${callingPluginName}_flevel`]: flevel } = args[args.length - 1];
   // ...
   if (flevel !== undefined) {
     console.log(`and the argument of this call is: ` + flevel);
@@ -18,7 +17,7 @@ function extendNewGlobalFunction({ callingPluginName, previousFunction }, ...arg
   }
   if (typeof previousFunction === `function`) {
     // ...
-    return previousFunction(...args); // si omitis esto, entonces newGlobalFunction (la primera extension que creo la funcion global) no se ejecutara
+    return previousFunction(functionArguments, arguments[arguments.length - 1]); // si omitis esto, entonces newGlobalFunction (la primera extension que creo la funcion global) no se ejecutara
   }
 }
 
