@@ -5,6 +5,7 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/vote`,
   author: `ayudantehax`,
+  dependencies: [`ayudantehax/console`],
 }
 
 async function playerVote(playerId) {
