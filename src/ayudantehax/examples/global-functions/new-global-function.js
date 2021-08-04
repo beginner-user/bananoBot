@@ -7,13 +7,9 @@ room.pluginSpec = {
   author: `ayudantehax`,
 }
 
-function newGlobalFunction({ callingPluginName, previousFunction }, ...args) {
-  args.pop(); // el ultimo argumento es el objeto que contiene los argumentos de las extensiones
+function newGlobalFunction({ callingPluginName, previousFunction }, functionArguments, {} = {}) {
   console.log(`newGlobalFunction has been called from: ` + callingPluginName);
-  let msg = `and the arguments of the function are: `;
-  for (let arg of args) msg += arg +`, `;
-  msg.slice(0, -2);
-  console.log(msg);
+  console.log(`and the arguments of the function are: ` + functionArguments);
 }
 
 room.onRoomLink = function(url) {
