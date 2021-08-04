@@ -10,7 +10,7 @@ room.pluginSpec = {
 
 function extendNewGlobalFunction({ callingPluginName, previousFunction }, ...args) {
   console.log(`Last call from: ` + callingPluginName + ` before calling newGlobalFunction`);
-  let { [`${callingPluginName}_flevel`]: flevel } = args[args.length - 1];
+  let { flevel } = args[args.length - 1];
   // ...
   if (flevel !== undefined) {
     console.log(`and the argument of this call is: ` + flevel);
