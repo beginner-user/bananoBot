@@ -44,10 +44,10 @@ room.pluginSpec = {
 
 const inputRequests = new Map();
 
-async function getPlayerInput({ previousFunction, callingPluginName }, playerId) {
+async function getPlayerInput({ previousFunction, callingPluginName }, ...args) {
   return new Promise((resolve, reject) => {
-    if (Number.isInteger(playerId)) {
-      let response = inputRequests.get(playerId).enqueue({ pluginName: callingPluginName, resolve });
+    if (Number.isInteger(args[0])) { // playerId === args[0]
+      let response = inputRequests.get(args[0]).enqueue({ pluginName: callingPluginName, resolve });
       if (response === false) {
         resolve(false);
       }
