@@ -40,7 +40,6 @@ var room = HBInit();
 room.pluginSpec = {
   name: `ayudantehax/console`,
   author: `ayudantehax`,
-  version: `1.0.0`,
 }
 
 const inputRequests = new Map();
