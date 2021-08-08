@@ -12,7 +12,6 @@ room.pluginSpec = {
 const cancelHandlers = new Set();
 
 /**
- * 
  * @param {number} playerId
  * @returns {boolean} - True if player was added successfully, false otherwise.
  */
