@@ -23,7 +23,7 @@ function onPlayerVote(playerId, option) {
 }
 
 room.onRoomLink = function(url) {
-  addPlayer = room.getPlugin(`anonjoy/input/post-handler-hook`).addPlayer
+  addPlayer = room.getPlugin(`anonjoy/input/post-handler-hook`).addPlayer;
 }
 
 room.onPlayerChat = function(player, message) {
