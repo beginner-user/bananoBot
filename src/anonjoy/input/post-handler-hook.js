@@ -2,7 +2,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `anonjoy/tu-modulo`,
+  name: `anonjoy/input/post-handler-hook`,
   author: `anonjoy`,
 }
 
