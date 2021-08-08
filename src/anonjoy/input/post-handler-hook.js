@@ -13,7 +13,8 @@ const cancelHandlers = new Set();
 
 /**
  * @param {number} playerId
- * @returns {boolean} - True if player was added successfully, false otherwise.
+ * @returns {boolean} - True if player ID was added successfully, false otherwise.
+ * @description Add player ID to the set so that the remaining handlers of the onPlayerChat event are canceled.
  */
 function addPlayer(playerId) {
   // We check if the ID is valid with the native method getPlayer
@@ -28,10 +29,8 @@ function addPlayer(playerId) {
 
 /**
  * @param {object} hookObject
- * @param {object} hookObject.room
- * @param {object} hookObject.metadata
- * @param {object} player
- * @returns {boolean} - True if the player was deleted successfully, false otherwise.
+ * @param {object} player - PlayerObject.
+ * @returns {boolean} - True if player ID was deleted successfully, false otherwise.
  * @description https://hhm.surge.sh/api/tutorial-events.html#post-event-handler-hooks
  */
 function onPlayerChatPostEventHandlerHook({}, player) {
