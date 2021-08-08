@@ -10,8 +10,14 @@ room.pluginSpec = {
   ],
 }
 
+/**
+ * Current voting options.
+ */
 const options = new Map();
 
+/**
+ * @function addPlayer - https://github.com/beginner-user/bananoBot/blob/vote/src/anonjoy/input/post-handler-hook.js
+ */
 let addPlayer;
 
 function startVotation(player, arguments) {
