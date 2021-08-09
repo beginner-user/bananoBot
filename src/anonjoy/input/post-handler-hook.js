@@ -27,10 +27,17 @@ function onPlayerChatPostEventHandlerHook({}, player) {
   return !cancelHandlers.delete(player.id);
 }
 
-room.onRoomLink = function(url) {
+//
+// Event Handlers
+//
+
+function onRoomLinkHandler(url) {
   room.addPostEventHandlerHook(`onPlayerChat`, onPlayerChatPostEventHandlerHook);
 }
 
+//
 // Exports
+//
 
+room.onRoomLink = onRoomLinkHandler;
 room.addPlayer = addPlayer;
