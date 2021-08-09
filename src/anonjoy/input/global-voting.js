@@ -28,7 +28,7 @@ let votingStarted = false;
 
 /**
  * @returns {boolean}
- * @description Tells us if there is a vote in progress.
+ * @description Tells us if there is a voting in progress.
  */
 function isVotingStarted() {
   return votingStarted;
