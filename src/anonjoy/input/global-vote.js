@@ -35,7 +35,7 @@ function startVotation(player, arguments) {
  * @description Local event called when the player types one of the current voting options.
  */
 function onPlayerVote(playerId, option) {
-  addPlayer(player.id);
+  addPlayer(playerId);
   options.get(option).votes.add(playerId);
 }
 
