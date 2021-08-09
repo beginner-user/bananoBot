@@ -23,7 +23,7 @@ let addPlayer;
 /**
  * @param {Object} player
  * @param {string[]} arguments
- * @description Local event called when the player types one of the current voting options.
+ * @description 
  */
 function startVotation(player, arguments) {
   
