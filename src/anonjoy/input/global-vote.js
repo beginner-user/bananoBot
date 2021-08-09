@@ -21,7 +21,7 @@ const options = new Map();
 let addPlayer;
 
 /**
- * @param {Object} player - PlayerObject.
+ * @param {Object} player
  * @param {string[]} arguments
  * @description Local event called when the player types one of the current voting options.
  */
