@@ -32,10 +32,18 @@ function startVotation(player, arguments) {
 /**
  * @param {number} playerId
  * @param {string} option
+ * @returns {boolean} - True if player ID was added successfully, false otherwise.
  * @description Local event called when the player types one of the current voting options.
  */
 function onPlayerVote(playerId, option) {
-  options.get(option).votes.add(playerId);
+  // We check if the ID is valid with the native method getPlayer
+  if (room.getPlayer(playerId) !== null) {
+    options.get(option).votes.add(playerId);
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 room.onRoomLink = function(url) {
