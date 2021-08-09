@@ -46,19 +46,26 @@ function isVotingStarted() {
  * @description 
  */
 async function startVoting(hmmArg, optionList, timeLimit) {
+  if (!isVotingStarted()) {
+    callingPluginName = hmmArg.callingPluginName;
+    votingStarted = true;
   
-  callingPluginName = hmmArg.callingPluginName;
-  votingStarted = true;
+    for (let option of optionList) {
+      options.set(option, { votes: new Set() });
+    }
   
-  for (let option of optionList) {
-    options.set(option, { votes: new Set() });
+    await new Promise(resolve => setTimeout(resolve, timeLimit));
+  
+    let callingPlugin = room.getPlugin(callingPluginName).onVotingFinish(options);
+    
+    votingStarted = false;
+    options.clear();
+    
+    return true;
   }
-  
-  await new Promise(resolve => setTimeout(resolve, timeLimit));
-  
-  let callingPlugin = room.getPlugin(callingPluginName).onVotingFinish(options);
-  votingStarted = false;
-  options.clear();
+  else {
+    return false;
+  }
 }
 
 /**
