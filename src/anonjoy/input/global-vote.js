@@ -21,6 +21,18 @@ const options = new Map();
 let addPlayer;
 
 /**
+ * Voting flag
+ * @type {boolean}
+ */
+let votingStarted = false;
+
+/**
+ * @returns {boolean}
+ * @description Tells us if there is a vote in progress.
+ */
+function isVotingStarted()
+
+/**
  * @param {Object} player
  * @param {string[]} arguments
  * @description 
@@ -61,3 +73,7 @@ room.onPlayerChat = function(player, message) {
 }
 
 room.onCommand_votation = startVotation;
+
+// Exports
+
+room.isVotingStarted = isVotingStarted;
