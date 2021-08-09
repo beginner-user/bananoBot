@@ -28,8 +28,8 @@ function addPlayer(playerId) {
 }
 
 /**
- * @param {object} hookObject
- * @param {object} player - PlayerObject.
+ * @param {Object} hookObject
+ * @param {Object} player
  * @returns {boolean} - True if player ID was deleted successfully, false otherwise.
  * @description https://hhm.surge.sh/api/tutorial-events.html#post-event-handler-hooks
  */
