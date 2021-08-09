@@ -20,10 +20,20 @@ const options = new Map();
  */
 let addPlayer;
 
+/**
+ * @param {Object} player - PlayerObject.
+ * @param {string[]} arguments
+ * @description Local event called when the player types one of the current voting options.
+ */
 function startVotation(player, arguments) {
   
 }
 
+/**
+ * @param {number} playerId
+ * @param {string} option
+ * @description Local event called when the player types one of the current voting options.
+ */
 function onPlayerVote(playerId, option) {
   options.get(option).votes.add(playerId);
 }
