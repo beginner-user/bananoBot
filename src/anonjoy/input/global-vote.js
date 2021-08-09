@@ -46,6 +46,7 @@ room.onRoomLink = function(url) {
 }
 
 room.onPlayerChat = function(player, message) {
+  message = message.trimStart();
   for (let option of options.keys()) {
     if (message.startWith(option)) {
       if (!options.get(option).votes.has(player.id)) {
