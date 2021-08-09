@@ -60,15 +60,17 @@ room.onRoomLink = function(url) {
 }
 
 room.onPlayerChat = function(player, message) {
-  let msg = message.trimStart();
-  for (let option of options.keys()) {
-    if (msg.startWith(option)) {
-      if (!options.get(option).votes.has(player.id)) {
-        onPlayerVote(player.id, option);
-        return false;
-      }
-      else {
-        return;
+  if (isVotingStarted()) {
+    let msg = message.trimStart();
+    for (let option of options.keys()) {
+      if (msg.startWith(option)) {
+        if (!options.get(option).votes.has(player.id)) {
+          onPlayerVote(player.id, option);
+          return false;
+        }
+        else {
+          return;
+        }
       }
     }
   }
