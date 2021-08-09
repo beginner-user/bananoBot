@@ -20,7 +20,7 @@ function addPlayer(playerId) {
 }
 
 /**
- * @returns {boolean} - True if player ID was deleted successfully, false otherwise.
+ * @returns {boolean} - False if player ID was deleted successfully, true otherwise.
  * @description https://hhm.surge.sh/api/tutorial-events.html#post-event-handler-hooks
  */
 function onPlayerChatPostEventHandlerHook({}, player) {
