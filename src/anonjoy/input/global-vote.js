@@ -46,6 +46,8 @@ function onPlayerVote(playerId, option) {
   }
 }
 
+// Events
+
 room.onRoomLink = function(url) {
   addPlayer = room.getPlugin(`anonjoy/input/post-handler-hook`).addPlayer;
 }
