@@ -2,7 +2,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `anonjoy/input/global-vote`,
+  name: `anonjoy/input/global-voting`,
   author: `anonjoy`,
   dependencies: [
     `anonjoy/input/post-handler-hook`, 
@@ -39,7 +39,7 @@ function isVotingStarted() {
  * @param {string[]} arguments
  * @description 
  */
-function startVotation(player, arguments) {
+function startVoting(player, arguments) {
   
 }
 
@@ -76,7 +76,7 @@ room.onPlayerChat = function(player, message) {
   }
 }
 
-room.onCommand_votation = startVotation;
+room.onCommand_voting = startVoting;
 
 // Exports
 
