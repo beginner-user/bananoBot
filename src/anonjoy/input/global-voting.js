@@ -16,12 +16,18 @@ room.pluginSpec = {
 const options = new Map();
 
 /**
+ * Plugin that started the voting.
+ * @type {string}
+ */
+let callingPluginName;
+
+/**
  * @function addPlayer - https://github.com/beginner-user/bananoBot/blob/vote/src/anonjoy/input/post-handler-hook.js
  */
 let addPlayer;
 
 /**
- * Voting flag
+ * Voting flag.
  * @type {boolean}
  */
 let votingStarted = false;
@@ -35,12 +41,24 @@ function isVotingStarted() {
 }
 
 /**
- * @param {Object} player
- * @param {string[]} arguments
+ * @param {string[]} optionList
+ * @param {number} timeLimit
  * @description 
  */
-function startVoting(player, arguments) {
+async function startVoting(hmmArg, optionList, timeLimit) {
   
+  callingPluginName = hmmArg.callingPluginName;
+  votingStarted = true;
+  
+  for (let option of optionList) {
+    options.set(option, { votes: new Set() });
+  }
+  
+  await new Promise(resolve => setTimeout(resolve, timeLimit));
+  
+  let callingPlugin = room.getPlugin(callingPluginName).onVotingFinish(options);
+  votingStarted = false;
+  options.clear();
 }
 
 /**
@@ -53,11 +71,19 @@ function onPlayerVote(playerId, option) {
   options.get(option).votes.add(playerId);
 }
 
-room.onRoomLink = function(url) {
+//
+// Event Handlers
+//
+
+function onRoomLinkHandler(url) {
   addPlayer = room.getPlugin(`anonjoy/input/post-handler-hook`).addPlayer;
+  
+  // create global functions
+  room.extend(`startVoting`, startVoting);
+  room.extend(`isVotingStarted`, isVotingStarted);
 }
 
-room.onPlayerChat = function(player, message) {
+function onPlayerChatHandler(player, message) {
   if (isVotingStarted()) {
     let msg = message.trimStart();
     for (let option of options.keys()) {
@@ -74,8 +100,9 @@ room.onPlayerChat = function(player, message) {
   }
 }
 
-room.onCommand_voting = startVoting;
-
+//
 // Exports
+//
 
-room.isVotingStarted = isVotingStarted;
+room.onRoomLink = onRoomLinkHandler;
+room.onPlayerChat = onPlayerChatHandler;
