@@ -30,7 +30,9 @@ let votingStarted = false;
  * @returns {boolean}
  * @description Tells us if there is a vote in progress.
  */
-function isVotingStarted()
+function isVotingStarted() {
+  return votingStarted;
+}
 
 /**
  * @param {Object} player
