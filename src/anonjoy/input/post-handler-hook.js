@@ -13,18 +13,10 @@ const cancelHandlers = new Set();
 
 /**
  * @param {number} playerId
- * @returns {boolean} - True if player ID was added successfully, false otherwise.
  * @description Add player ID to the set so that the remaining handlers of the onPlayerChat event are canceled.
  */
 function addPlayer(playerId) {
-  // We check if the ID is valid with the native method getPlayer
-  if (room.getPlayer(playerId) !== null) {
-    cancelHandlers.add(playerId);
-    return true;
-  }
-  else {
-    return false;
-  }
+  cancelHandlers.add(playerId);
 }
 
 /**
