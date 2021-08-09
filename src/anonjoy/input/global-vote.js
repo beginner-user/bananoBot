@@ -35,6 +35,7 @@ function startVotation(player, arguments) {
  * @description Local event called when the player types one of the current voting options.
  */
 function onPlayerVote(playerId, option) {
+  addPlayer(player.id);
   options.get(option).votes.add(playerId);
 }
 
@@ -48,7 +49,6 @@ room.onPlayerChat = function(player, message) {
   for (let option of options.keys()) {
     if (message.startWith(option)) {
       if (!options.get(option).votes.has(player.id)) {
-        addPlayer(player.id);
         onPlayerVote(player.id, option);
         return false;
       }
