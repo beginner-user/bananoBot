@@ -9,8 +9,7 @@ function onHhmPluginRemovedHandler(plugin) {
   switch (plugin.getName()) {
     case `ayudantehax/gamemode/ctf/core`:
       room.getPlayerList().forEach((player) => {
-        
-        room.setPlayerAvatar(player.id, `\u2000`)
+        room.setPlayerAvatar(player.id, null);
       });
       break;
   }
