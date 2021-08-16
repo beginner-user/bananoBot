@@ -18,6 +18,15 @@ let currentGamemode;
  */
 let roles;
 
+/**
+ * TODO Documentation
+ */
+function undoPlayerModifications() {
+  room.getPlayerList().forEach((player) => {
+    room.setPlayerAvatar(player.id, null);
+  });
+}
+
 //
 // Event Handlers
 //
@@ -50,7 +59,9 @@ function onCommandGamemode1Handler(player, [gamemode] = []) {
       // disable current gamemode
       if (currentGamemode !== `free`) {
         // https://hhm.surge.sh/api/PluginManager.html#disablePlugin
-        if (manager.disablePlugin(`ayudantehax/gamemode/${currentGamemode}/core`, true).length === 0) {
+        if (manager.disablePlugin(`ayudantehax/gamemode/${currentGamemode}/core`, true).length !== 0) {
+          undoPlayerModifications();
+        } else {
           // error handler
         }
       }
