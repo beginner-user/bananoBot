@@ -52,7 +52,7 @@ function onRoomLinkHandler(url) {
 function onCommandGamemode1Handler(player, arguments, argumentString) {
   switch (arguments[0]) {
     case `ctf`: case `free`: 
-      
+      let disable = `ayudantehax/gamemode/${arguments[0]}/core`;
       currentGamemode = arguments[0];
       break;
   }
