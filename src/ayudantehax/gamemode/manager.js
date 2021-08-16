@@ -35,11 +35,12 @@ function setGamemode({}, gamemode) {
         // https://hhm.surge.sh/api/PluginManager.html#disablePlugin
         if (manager.disablePlugin(`ayudantehax/gamemode/${currentGamemode}/core`, true).length !== 0) {
           undoPlayerModifications();
+          currentGamemode = `free`;
         } else {
           // error handler
         }
       }
-      // set gamemode
+      // enable new gamemode
       if (gamemode !== `free`) {
         // https://hhm.surge.sh/api/PluginManager.html#enablePlugin
         if (manager.enablePlugin(`ayudantehax/gamemode/${gamemode}/core`) === true) {
