@@ -5,6 +5,10 @@ room.pluginSpec = {
   author: `ayudantehax`
 }
 
+//
+// Event Handlers
+//
+
 /**
  * @param {HhmRoomObject} plugin
  * @description https://hhm.surge.sh/api/tutorial-events.html#hhm-events
@@ -20,5 +24,9 @@ function onHhmPluginRemovedHandler(plugin) {
       break;
   }
 }
+
+//
+// Exports
+//
 
 room.onHhm_pluginRemoved = onHhmPluginRemovedHandler;
