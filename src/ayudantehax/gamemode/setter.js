@@ -50,10 +50,11 @@ function onRoomLinkHandler(url) {
  *              https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js
  */
 function onCommandGamemode1Handler(player, arguments, argumentString) {
-  switch (arguments[0]) {
+  const gamemode = arguments[0];
+  switch (gamemode) {
     case `ctf`: case `free`: 
-      let disable = `ayudantehax/gamemode/${arguments[0]}/core`;
-      currentGamemode = arguments[0];
+      let disable = `ayudantehax/gamemode/${gamemode}/core`;
+      currentGamemode = gamemode;
       break;
   }
 }
