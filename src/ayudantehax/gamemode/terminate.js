@@ -10,7 +10,7 @@ room.pluginSpec = {
 //
 
 /**
- * @param {HhmRoomObject} plugin - https://hhm.surge.sh/api/HhmRoomObject.html
+ * @param {HhmRoomObject} plugin - The removed plugin. https://hhm.surge.sh/api/HhmRoomObject.html
  * @description https://hhm.surge.sh/api/tutorial-events.html#hhm-events
  *              https://hhm.surge.sh/api/HHM.events.html
  */
