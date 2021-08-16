@@ -16,7 +16,7 @@ let currentGamemode;
 /**
  * @type {HhmRoomObject}
  */
-let pluginControl;
+let roles;
 
 //
 // Event Handlers
@@ -40,7 +40,7 @@ const onCommandAuthData = {
  * and its [modification]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
  */
 function onRoomLinkHandler(url) {
-  pluginControl = room.getPlugin(`sav/plugin-control`);
+  roles = room.getPlugin(`sav/roles`);
 }
 
 /**
@@ -53,15 +53,35 @@ function onRoomLinkHandler(url) {
  */
 function onCommandGamemode1Handler(player, [gamemode] = []) {
   const playerId = player.id;
-  
-  switch (gamemode) {
-    case `ctf`: case `free`:
-      // disable gamemode `ayudantehax/gamemode/${gamemode}/core`;
-      if (gamemode !== `free`) {
-        // set gamemode
+  if (!roles.ensurePlayerRoles(playerId, `host`, room)) {
+    return;
+  }
+  // check if gamemode and current gamemode are differents
+  if (gamemode !== currentGamemode) {
+    // check if gamemode exists.
+    // https://hhm.surge.sh/api/HhmRoomObject.html#.hasPlugin
+    if (room.hasPlugin(`ayudantehax/gamemode/${gamemode}/core`)) {
+      // https://hhm.surge.sh/api/HhmRoomObject.html#.getPluginManager
+      const manager = room.getPluginManager();
+      // disable current gamemode
+      if (currentGamemode !== `free`) {
+        // https://hhm.surge.sh/api/PluginManager.html#disablePlugin
+        if (manager.disablePlugin(pluginName, true).length === 0) {
+          // error handler
+        }
       }
-      currentGamemode = gamemode;
-      break;
+      // set gamemode
+      if (gamemode !== `free`) {
+        // https://hhm.surge.sh/api/PluginManager.html#enablePlugin
+        if (!manager.enablePlugin(pluginName)) {
+          // error handler
+        }
+      }
+    } else {
+      // error handler
+    }
+  } else {
+    // error handler
   }
 }
 
