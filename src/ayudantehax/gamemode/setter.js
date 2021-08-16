@@ -44,8 +44,8 @@ function onRoomLinkHandler(url) {
 
 /**
  * @param {PlayerObject} player
- * @param {string[]} arguments
- * @param {string} - argument String
+ * @param {string[]}
+ * @param {string}
  * @description https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing
  *              https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js
  */
