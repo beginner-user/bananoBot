@@ -47,11 +47,11 @@ function onRoomLinkHandler(url) {
  * @param {PlayerObject} player
  * @param {string[]}
  * @param {string}
- * @description 
+ * @description Set gamemode
  * See [explanation]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing}
  * and [code source]{@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js}      
  */
-function onCommandGamemode1Handler(player, [pluginName] = []) {
+function onCommandGamemode1Handler(player, [gamemode] = []) {
   const playerId = player.id;
   
   switch (gamemode) {
