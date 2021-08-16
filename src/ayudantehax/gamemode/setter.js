@@ -36,9 +36,8 @@ const onCommandAuthData = {
 
 /**
  * @param {string} url
- * @description 
- * See {@link https://github.com/haxball/haxball-issues/wiki/Headless-Host#onroomlink}
- * and {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
+ * See the [description]{@link https://github.com/haxball/haxball-issues/wiki/Headless-Host#onroomlink} of the native event
+ * and its [modification]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
  */
 function onRoomLinkHandler(url) {
   pluginControl = room.getPlugin(`sav/plugin-control`);
@@ -49,8 +48,8 @@ function onRoomLinkHandler(url) {
  * @param {string[]}
  * @param {string}
  * @description 
- * See {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing}
- * and {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js}      
+ * See [explanation]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing}
+ * and [code source]{@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js}      
  */
 function onCommandGamemode1Handler(player, [pluginName] = []) {
   const playerId = player.id;
