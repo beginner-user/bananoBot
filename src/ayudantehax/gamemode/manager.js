@@ -4,14 +4,15 @@ room.pluginSpec = {
   name: `ayudantehax/gamemode/setter`,
   author: `ayudantehax`,
   dependencies: [
-    `sav/plugin-control`
+    `sav/roles`,
+    `sav/commands`
   ],
 }
 
 /**
  * @type {string}
  */
-let currentGamemode;
+let currentGamemode = `free`;
 
 /**
  * @type {HhmRoomObject}
