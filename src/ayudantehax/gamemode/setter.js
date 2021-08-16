@@ -49,7 +49,9 @@ function onRoomLinkHandler(url) {
  * @description https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing
  *              https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js
  */
-function onCommandGamemode1Handler(player, [gamemode]) {
+function onCommandGamemode1Handler(player, [pluginName] = []) {
+  const playerId = player.id;
+  
   switch (gamemode) {
     case `ctf`: case `free`: 
       let disable = `ayudantehax/gamemode/${gamemode}/core`;
