@@ -24,8 +24,8 @@ let pluginControl;
 
 /**
  * @description 
- * See {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-help-display-help-and-usage-information}
- * and {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/help.js}
+ * See [explanation]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-help-display-help-and-usage-information}
+ * and [code source]{@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/help.js}
  */
 const onCommandAuthData = {
   'sav/chat': {
