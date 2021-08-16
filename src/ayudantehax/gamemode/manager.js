@@ -16,6 +16,7 @@ let currentGamemode = `free`;
 
 /**
  * @type {HhmRoomObject}
+ * @See {@link https://hhm.surge.sh/api/HhmRoomObject.html}
  */
 let roles;
 
