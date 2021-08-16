@@ -1,0 +1,64 @@
+{
+	"name" : "Big",
+	
+	"width" : 600,
+	"height" : 270,
+	
+	"spawnDistance" : 350,
+	
+	"discs" : [
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+    
+    { "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+    
+    { "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+    
+    { "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+    
+    { "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+    
+    { "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" },
+		{ "pos" : [0, 0], "trait" : "flag" }
+    
+	],
+	
+  "joints" : [
+		{ "d0" : 1, "d1" : 2, "trait" : "line", "color" : "ff0000" },
+		{ "d0" : 3, "d1" : 4, "trait" : "line", "color" : "ff0000" },
+    
+    { "d0" : 5, "d1" : 6, "trait" : "line", "color" : "ff0000" },
+		{ "d0" : 7, "d1" : 8, "trait" : "line", "color" : "ff0000" },
+    
+    { "d0" : 9, "d1" : 10, "trait" : "line", "color" : "ff0000" },
+		{ "d0" : 11, "d1" : 12, "trait" : "line", "color" : "ff0000" },
+    
+    { "d0" : 13, "d1" : 14, "trait" : "line", "color" : "ff0000" },
+		{ "d0" : 15, "d1" : 16, "trait" : "line", "color" : "ff0000" },
+    
+    { "d0" : 17, "d1" : 18, "trait" : "line", "color" : "ff0000" },
+		{ "d0" : 19, "d1" : 20, "trait" : "line", "color" : "ff0000" },
+
+	],
+  
+	"traits" : {
+    "flag" : { "radius" : 0, "cMask" : ["" ] },
+    "line" : { "length" : [0, 999999999] }
+	}
+}
