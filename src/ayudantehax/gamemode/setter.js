@@ -55,8 +55,6 @@ function onCommandGamemode1Handler(player, arguments, argumentString) {
       
       currentGamemode = arguments[0];
       break;
-    default: 
-      break;
   }
 }
 
