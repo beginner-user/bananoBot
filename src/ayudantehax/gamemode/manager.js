@@ -1,7 +1,7 @@
 var room = HBInit();
 
 room.pluginSpec = {
-  name: `ayudantehax/gamemode/setter`,
+  name: `ayudantehax/gamemode/manager`,
   author: `ayudantehax`,
   dependencies: [
     `sav/roles`,
