@@ -53,8 +53,11 @@ function onCommandGamemode1Handler(player, [pluginName] = []) {
   const playerId = player.id;
   
   switch (gamemode) {
-    case `ctf`: case `free`: 
-      let disable = `ayudantehax/gamemode/${gamemode}/core`;
+    case `ctf`: case `free`:
+      // disable gamemode `ayudantehax/gamemode/${gamemode}/core`;
+      if (gamemode !== `free`) {
+        // set gamemode
+      }
       currentGamemode = gamemode;
       break;
   }
