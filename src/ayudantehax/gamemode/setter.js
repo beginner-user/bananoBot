@@ -24,8 +24,8 @@ let pluginControl;
 
 /**
  * @description 
- * @see {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-help-display-help-and-usage-information}
- * @see {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/help.js}
+ * See {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-help-display-help-and-usage-information}
+ * and {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/help.js}
  */
 const onCommandAuthData = {
   'sav/chat': {
@@ -37,8 +37,8 @@ const onCommandAuthData = {
 /**
  * @param {string} url
  * @description 
- * @see {@link https://github.com/haxball/haxball-issues/wiki/Headless-Host#onroomlink}
- * @see {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
+ * See {@link https://github.com/haxball/haxball-issues/wiki/Headless-Host#onroomlink}
+ * and {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
  */
 function onRoomLinkHandler(url) {
   pluginControl = room.getPlugin(`sav/plugin-control`);
@@ -49,8 +49,8 @@ function onRoomLinkHandler(url) {
  * @param {string[]}
  * @param {string}
  * @description 
- * @see {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing}
- * @see {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js}      
+ * See {@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-commands-easier-command-processing}
+ * and {@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/commands.js}      
  */
 function onCommandGamemode1Handler(player, [pluginName] = []) {
   const playerId = player.id;
