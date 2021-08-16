@@ -11,10 +11,11 @@ room.pluginSpec = {
 
 /**
  * @param {HhmRoomObject} plugin - The removed plugin. https://hhm.surge.sh/api/HhmRoomObject.html
- * @description https://hhm.surge.sh/api/tutorial-events.html#hhm-events
- *              https://hhm.surge.sh/api/HHM.events.html
+ * @description 
+ * See [explanation]{@link https://hhm.surge.sh/api/tutorial-events.html#hhm-events}, [methods]{@link https://hhm.surge.sh/api/HHM.events.html}
+ * and [method used]{@link https://hhm.surge.sh/api/HHM.events.html#.PLUGIN_DISABLED}
  */
-function onHhmPluginRemovedHandler(plugin) {
+function onHhmPluginDisabledHandler(plugin) {
   switch (plugin.getName()) {
     case `ayudantehax/gamemode/ctf/core`:
       // reset avatars at the end of gamemode ctf
@@ -29,4 +30,4 @@ function onHhmPluginRemovedHandler(plugin) {
 // Exports
 //
 
-room.onHhm_pluginRemoved = onHhmPluginRemovedHandler;
+room.onHhm_pluginDisabled = onHhmPluginDisabledHandler;
