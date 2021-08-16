@@ -42,7 +42,9 @@ function setGamemode({}, gamemode) {
       // set gamemode
       if (gamemode !== `free`) {
         // https://hhm.surge.sh/api/PluginManager.html#enablePlugin
-        if (!manager.enablePlugin(`ayudantehax/gamemode/${gamemode}/core`)) {
+        if (manager.enablePlugin(`ayudantehax/gamemode/${gamemode}/core`) === true) {
+          currentGamemode = gamemode;
+        } else {
           // error handler
         }
       }
