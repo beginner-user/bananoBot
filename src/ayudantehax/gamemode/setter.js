@@ -51,11 +51,11 @@ function onRoomLinkHandler(url) {
  */
 function onCommandGamemode1Handler(player, arguments, argumentString) {
   switch (arguments[0]) {
-    case `ctf`: 
-      pluginControl.onCommand1_plugin_(player, arguments);
-      break;
-    case `free`:
+    case `ctf`: case `free`: 
       
+      currentGamemode = arguments[0];
+      break;
+    default: 
       break;
   }
 }
