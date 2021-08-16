@@ -23,18 +23,6 @@ let roles;
 //
 
 /**
- * @description 
- * See [explanation]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#sav-help-display-help-and-usage-information}
- * and [code source]{@link https://github.com/saviola777/hhm-plugins/blob/master/src/sav/help.js}
- */
-const onCommandAuthData = {
-  'sav/chat': {
-    text: ` ROLE PASSWORD`,
-    roles: ['user']
-  }
-}
-
-/**
  * See the [description]{@link https://github.com/haxball/haxball-issues/wiki/Headless-Host#onroomlink} of the native event
  * and its [modification]{@link https://hhm.surge.sh/api/tutorial-writing-plugins.html#plugin-initialization}
  */
@@ -62,14 +50,14 @@ function onCommandGamemode1Handler(player, [gamemode] = []) {
       // disable current gamemode
       if (currentGamemode !== `free`) {
         // https://hhm.surge.sh/api/PluginManager.html#disablePlugin
-        if (manager.disablePlugin(pluginName, true).length === 0) {
+        if (manager.disablePlugin(`ayudantehax/gamemode/${currentGamemode}/core`, true).length === 0) {
           // error handler
         }
       }
       // set gamemode
       if (gamemode !== `free`) {
         // https://hhm.surge.sh/api/PluginManager.html#enablePlugin
-        if (!manager.enablePlugin(pluginName)) {
+        if (!manager.enablePlugin(`ayudantehax/gamemode/${gamemode}/core`)) {
           // error handler
         }
       }
